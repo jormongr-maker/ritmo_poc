@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ritmo — Gamificación para tu ciclo</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind config: fuente + paleta ColorHunt -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Quicksand', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial']
+          },
+          colors: {
+            brand: {
+              cream: '#FAF9EE',   // fondo principal
+              sage: '#A2AF9B',    // CTA principal
+              beige: '#DCCFC0',   // tarjetas / bloques
+              light: '#EEEEEE',   // separadores, bordes sutiles
+              sageDark: '#8F9C88' // hover CTA (derivado)
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <meta name="description" content="Ritmo — Gamificación que celebra tu constancia y adapta entreno y nutrición a cada fase del ciclo menstrual." />
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans antialiased">
+
+  <!-- NAV (simple ancla al formulario) -->
+  <header class="w-full">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl md:text-2xl font-bold tracking-wide text-gray-800">
+        Rit<span class="text-brand-sage">MO</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#features" class="hover:opacity-80">Características</a>
+        <a href="#about" class="hover:opacity-80">Cómo funciona</a>
+        <a href="#contact" class="px-4 py-2 rounded-full bg-brand-sage text-white hover:bg-brand-sageDark transition">Únete a la beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <!-- Reemplaza por una imagen local .jpg/.webp -->
+    <img src="woman1.jpg" alt="Mujer entrenando" class="absolute inset-0 w-full h-full object-cover opacity-60">
+    <!-- Overlay suave con la paleta -->
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-cream/70 via-brand-cream/60 to-brand-cream"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 pt-24 pb-28 md:pt-32 md:pb-36 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
+        Entrena en sintonía con tu ciclo
+      </h1>
+      <p class="text-base md:text-xl mt-5 max-w-3xl mx-auto text-gray-700">
+        Gamificación <span class="font-semibold">que celebra tu constancia</span>, no solo tus récords.
+        Micro-retos, nutrición y descanso adaptados a cada fase del ciclo menstrual.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact" class="px-8 py-4 rounded-full bg-brand-sage text-white hover:bg-brand-sageDark transition shadow-soft">
+          Únete a la beta
+        </a>
+        <a href="#features" class="px-8 py-4 rounded-full bg-white/80 hover:bg-white transition border border-brand-light">
+          Ver características
+        </a>
+      </div>
+
+      <!-- Motas decorativas suaves -->
+      <div class="pointer-events-none absolute -left-24 -bottom-24 w-72 h-72 bg-brand-beige/50 rounded-full blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-24 -top-24 w-72 h-72 bg-brand-light/70 rounded-full blur-3xl"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-5 text-gray-900">Gamificación pensada para ti</h2>
+        <p class="mb-4 leading-relaxed">
+          Tu energía cambia durante el ciclo. En lugar de penalizarte por hacer menos, RitMO refuerza
+          <span class="font-semibold">cada pequeña acción</span>, desde un estiramiento de 5 minutos hasta un WOD completo.
+        </p>
+        <p class="mb-6 leading-relaxed">
+          Con micro-retos por fase, recomendaciones de nutrición y recordatorios de descanso, mantienes la motivación en días altos y bajos.
+        </p>
+        <ul class="space-y-3 text-gray-800">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-2.5 h-2.5 rounded-full bg-brand-sage"></span>
+            Micro-retos diarios adaptados a tu fase
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-2.5 h-2.5 rounded-full bg-brand-sage"></span>
+            Puntos por consistencia y rachas saludables
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-2.5 h-2.5 rounded-full bg-brand-sage"></span>
+            Consejos simples de nutrición y recuperación
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-2.5 h-2.5 rounded-full bg-brand-sage"></span>
+            Progreso claro y motivador, sin culpa
+          </li>
+        </ul>
+      </div>
+      <div>
+        <!-- Reemplaza por imagen local -->
+        <img src="woman1.jpg" alt="Rutina con mancuernas"
+             class="rounded-2xl shadow-soft border border-brand-light">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-16 md:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Características principales</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-brand-beige/40 rounded-2xl p-6 md:p-8 shadow-soft border border-brand-light">
+          <img src="woman2.jpg" alt="Entrenamiento al aire libre" class="rounded-xl mb-6 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Constancia premiada</h3>
+          <p class="text-gray-700">Suma puntos por mantener el hábito, incluso con acciones pequeñas en días de baja energía.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-brand-beige/40 rounded-2xl p-6 md:p-8 shadow-soft border border-brand-light">
+          <img src="woman3.jpg" alt="Nutrición saludable" class="rounded-xl mb-6 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Nutrición adaptada</h3>
+          <p class="text-gray-700">Tips prácticos por fase para reducir antojos, equilibrar energía y mejorar la recuperación.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-brand-beige/40 rounded-2xl p-6 md:p-8 shadow-soft border border-brand-light">
+          <img src="woman4.jpg" alt="Motivación diaria" class="rounded-xl mb-6 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Motivación diaria</h3>
+          <p class="text-gray-700">Micro-retos, mensajes positivos y rachas que te mantienen conectada con tu cuerpo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA intermedio -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="rounded-2xl border border-brand-light bg-white/70 backdrop-blur-sm p-8 md:p-10 text-center shadow-soft">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Convierte cada día en un paso adelante</h3>
+        <p class="mt-3 text-gray-700">Sin presión. Sin culpa. Solo constancia inteligente alineada con tu ciclo.</p>
+        <a href="#contact" class="inline-block mt-6 px-8 py-3 rounded-full bg-brand-sage text-white hover:bg-brand-sageDark transition shadow-soft">
+          Quiero participar en la beta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="contact" class="py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Únete a la beta</h2>
+
+      <!-- Nota: puedes cambiar el endpoint si lo deseas -->
+      <form action="https://formsubmit.co/test@contaco.com" method="POST"
+            class="space-y-6 bg-white/80 p-6 md:p-8 rounded-2xl border border-brand-light shadow-soft">
+        <!-- Opcionales de formsubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nuevo lead — Ritmo">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block mb-2 font-semibold text-gray-900">Nombre</label>
+            <input id="name" name="name" type="text" required
+                   class="w-full p-3 rounded-lg border border-brand-light bg-brand-cream focus:outline-none focus:ring-2 focus:ring-brand-sage">
+          </div>
+          <div>
+            <label for="email" class="block mb-2 font-semibold text-gray-900">E-mail</label>
+            <input id="email" name="email" type="email" required
+                   class="w-full p-3 rounded-lg border border-brand-light bg-brand-cream focus:outline-none focus:ring-2 focus:ring-brand-sage">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="city" class="block mb-2 font-semibold text-gray-900">Ciudad</label>
+            <input id="city" name="city" type="text"
+                   class="w-full p-3 rounded-lg border border-brand-light bg-brand-cream focus:outline-none focus:ring-2 focus:ring-brand-sage">
+          </div>
+          <div>
+            <label for="activity" class="block mb-2 font-semibold text-gray-900">Nivel de actividad</label>
+            <select id="activity" name="activity"
+                    class="w-full p-3 rounded-lg border border-brand-light bg-brand-cream focus:outline-none focus:ring-2 focus:ring-brand-sage">
+              <option value="">Selecciona…</option>
+              <option value="beginner">Principiante</option>
+              <option value="intermediate">Intermedio</option>
+              <option value="advanced">Avanzado</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="message" class="block mb-2 font-semibold text-gray-900">Mensaje</label>
+          <textarea id="message" name="message" rows="4"
+                    class="w-full p-3 rounded-lg border border-brand-light bg-brand-cream focus:outline-none focus:ring-2 focus:ring-brand-sage"
+                    placeholder="Cuéntanos tu objetivo o dudas…"></textarea>
+        </div>
+
+        <button type="submit"
+                class="w-full py-3 rounded-lg bg-brand-sage text-white hover:bg-brand-sageDark transition shadow-soft">
+          Enviar
+        </button>
+      </form>
+
+      <p class="text-center text-sm text-gray-600 mt-4">
+        ¿Dudas? Escríbenos a
+        <a href="mailto:test@contaco.com" class="text-gray-900 underline decoration-brand-sage underline-offset-4 hover:opacity-80">
+          test@contaco.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-brand-light">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-700 text-sm">&copy; 2025 Ritmo. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#features" class="hover:opacity-80">Características</a>
+        <span class="text-gray-400">•</span>
+        <a href="#contact" class="hover:opacity-80">Únete a la beta</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
